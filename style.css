@@ -1,0 +1,66 @@
+*{
+    background: black;
+    margin: auto;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.text{
+    padding: 150px 150px;
+    color: white;
+}
+#loading{
+position: absolute;
+width: 150px;
+height: 150px;
+background: none;
+}
+
+#loading circle{
+ fill: none;
+ stroke-width: 5;
+ stroke: white;
+ stroke-dasharray: 50;
+ stroke-linecap: round;
+}
+
+@keyframes loader{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#loading circle{
+animation-name: loader;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+transform-origin: center center;
+}
+
+
+
+#loading circle:nth-child(1){
+animation-delay: 4.5s;
+stroke: orange;
+}
+
+#loading circle:nth-child(2){
+    animation-delay: 4.75s;
+    stroke: white;
+    }
+    
+    #loading circle:nth-child(3){
+    animation-delay: 5s;
+    stroke: green;
+    }
+
+#loading circle:nth-child(4){
+    animation-delay: 4s;
+    stroke: black;
+    }
